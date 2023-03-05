@@ -45,6 +45,11 @@
     margin-bottom: 25px;
 }
 
-.signupScreen__gray {
+.signupScreen_gray {
     color: gray;
+}
+
+.signupScreen_link:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
