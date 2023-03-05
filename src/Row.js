@@ -22,11 +22,13 @@ function Row({title, fetchUrl, isLargeRow = false}) {
         <h2>{title}</h2>
 
         <div className='row_posters'>
-        {movies.map(movie => (
-            <img className={`row_poster ${isLargeRow && "row_posterLarge"}`}
-            key={movie.id} 
+        {movies && movies.map(movie => (
+        <img
+            className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+            key={movie.id}
             src={`https://image.tmdb.org/t/p/original/${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
-            alt={movie.name}/>
+            alt={movie.name}
+        />
         ))}
         </div>
         
